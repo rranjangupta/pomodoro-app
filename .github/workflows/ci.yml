@@ -18,7 +18,8 @@ jobs:
     - name: Set up Java
       uses: actions/setup-java@v3
       with:
-        java-version: '17'  # Adjust the Java version if needed
+        java-version: '17'
+        distribution: 'adoptopenjdk'  # You can use 'zulu', 'adoptopenjdk', 'oraclejdk', etc.
 
     - name: Build Backend
       working-directory: ./backend
@@ -28,7 +29,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'  # Adjust the Node.js version if needed
+        node-version: '18'
 
     - name: Install Dependencies
       working-directory: ./frontend
