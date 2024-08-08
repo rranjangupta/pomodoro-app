@@ -28,7 +28,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version:'22.4.0'  # Adjust the Node.js version if needed
+        node-version: '18'  # Adjust the Node.js version if needed
 
     - name: Install Dependencies
       working-directory: ./frontend
@@ -45,4 +45,3 @@ jobs:
       with:
         name: frontend-build
         path: ./frontend/build
-
