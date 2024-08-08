@@ -19,12 +19,14 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '17'
-        distribution: 'temurin'  # Updated distribution name
+        distribution: 'temurin'  # Correct distribution name
 
     - name: Build Backend
       working-directory: ./backend
       run: |
         ./mvnw install
+      env:
+        MAVEN_OPTS: "-Xmx2g"  # Optional: Adjust JVM options if needed
 
     - name: Set up Node.js
       uses: actions/setup-node@v3
