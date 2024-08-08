@@ -19,7 +19,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '17'
-        distribution: 'adoptopenjdk'  # You can use 'zulu', 'adoptopenjdk', 'oraclejdk', etc.
+        distribution: 'temurin'  # Updated distribution name
 
     - name: Build Backend
       working-directory: ./backend
